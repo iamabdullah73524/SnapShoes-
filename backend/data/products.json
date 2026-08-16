@@ -1,0 +1,282 @@
+[
+  {
+    "_id": "prod1",
+    "name": "Porsche Runner",
+    "description": "Premium performance running shoes developed in collaboration with Porsche Design. Dynamic cushioning meets aerodynamic detail.",
+    "brand": "Porsche",
+    "price": 192,
+    "salePrice": 124,
+    "inventory": 15,
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "colors": [
+      "Charcoal Black",
+      "Neon Orange",
+      "Steel Grey"
+    ],
+    "images": [
+  "/images/porsche.avif"
+],
+    "category": "For Him",
+    "rating": 4.5,
+    "reviewCount": 84,
+    "isFeatured": true,
+    "isBestSeller": true
+  },
+  {
+    "_id": "prod2",
+    "name": "Air Huarache Soft Pink",
+    "description": "A soft pink edition of the Nike Air Huarache with premium mesh and sculpted comfort for all-day wear.",
+    "brand": "Nike",
+    "price": 186.5,
+    "salePrice": 158.99,
+    "inventory": 8,
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "colors": [
+      "Soft Pink",
+      "Off White",
+      "Sail"
+    ],
+    "images": [
+  "/images/air.avif"
+],
+    "category": "For Her",
+    "rating": 4.9,
+    "reviewCount": 128,
+    "isFeatured": true,
+    "isBestSeller": false
+  },
+  {
+    "_id": "prod3",
+    "name": "Yeezy Runner",
+    "description": "Modern streetwear running shoes featuring primeknit upper, translucent stripe, and ultra-cushioned boost sole for ultimate comfort.",
+    "brand": "Adidas",
+    "price": 210,
+    "salePrice": 179.99,
+    "inventory": 25,
+    "sizes": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "colors": [
+      "Cloud White",
+      "Core Black"
+    ],
+   "images": [
+  "/images/yeezy.avif"
+],
+    "category": "Unisex",
+    "rating": 4.8,
+    "reviewCount": 312,
+    "isFeatured": false,
+    "isBestSeller": true
+  },
+  {
+    "_id": "prod4",
+    "name": "Ninja Stride",
+    "description": "Stealth black lightweight training shoes with a futuristic ninja design, elastic straps, and high-friction rubber soles.",
+    "brand": "Reebok",
+    "price": 175.5,
+    "salePrice": 149.99,
+    "inventory": 4,
+    "sizes": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "colors": [
+      "Stealth Black"
+    ],
+    "images": [
+  "/images/ninja.avif"
+],
+    "category": "For Him",
+    "rating": 4.3,
+    "reviewCount": 61,
+    "isFeatured": false,
+    "isBestSeller": true
+  },
+  {
+    "_id": "prod5",
+    "name": "White Classic Court",
+    "description": "Clean, classic white leather sneakers that pair with any modern outfit for effortless everyday wear.",
+    "brand": "Puma",
+    "price": 158.25,
+    "salePrice": null,
+    "inventory": 30,
+    "sizes": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "colors": [
+      "Pure White",
+      "Off White"
+    ],
+    "images": [
+  "/images/white.avif"
+],
+    "category": "Unisex",
+    "rating": 4.6,
+    "reviewCount": 92,
+    "isFeatured": true,
+    "isBestSeller": true
+  },
+  {
+    "_id": "prod6",
+    "name": "Retro High Top",
+    "description": "Retro high-top style shoes with layered breathable mesh panels and signature chunky soles for bold streetwear looks.",
+    "brand": "Fila",
+    "price": 142,
+    "salePrice": null,
+    "inventory": 10,
+    "sizes": [
+      8,
+      9,
+      10
+    ],
+    "colors": [
+      "Core Black",
+      "Navy Blue"
+    ],
+    "images": [
+  "/images/Retro.avif"
+],
+    "category": "For Kids",
+    "rating": 4.3,
+    "reviewCount": 28,
+    "isFeatured": true,
+    "isBestSeller": false
+  },
+  {
+    "_id": "prod7",
+    "name": "Orbit Trainer",
+    "description": "Sculpted running shoes with responsive cushioning and bold contrast panels built for fast, agile strides.",
+    "brand": "Nike",
+    "price": 165,
+    "salePrice": 139,
+    "inventory": 12,
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "colors": [
+      "Black",
+      "Volt Yellow"
+    ],
+   "images": [
+  "/images/white.avif"
+],
+    "category": "For Him",
+    "rating": 4.7,
+    "reviewCount": 73,
+    "isFeatured": false,
+    "isBestSeller": true
+  },
+  {
+    "_id": "prod8",
+    "name": "Cloud Wave",
+    "description": "Ultra-soft knit runners with a streamlined silhouette, engineered comfort, and elevated street edge.",
+    "brand": "Adidas",
+    "price": 180,
+    "salePrice": 155,
+    "inventory": 18,
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "colors": [
+      "Sky Blue",
+      "White"
+    ],
+   "images": [
+  "/images/cloud.avif"
+],
+    "category": "For Her",
+    "rating": 4.9,
+    "reviewCount": 110,
+    "isFeatured": true,
+    "isBestSeller": false
+  },
+  {
+    "_id": "prod9",
+    "name": "Court Royale",
+    "description": "Court-inspired sneakers with plush padding, signature midsole, and bold contrast stitching.",
+    "brand": "Reebok",
+    "price": 148.5,
+    "salePrice": null,
+    "inventory": 22,
+    "sizes": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "colors": [
+      "White",
+      "Forest Green"
+    ],
+    "images": [
+  "/images/white.avif"
+],
+    "category": "Unisex",
+    "rating": 4.5,
+    "reviewCount": 54,
+    "isFeatured": false,
+    "isBestSeller": true
+  },
+  {
+    "_id": "prod10",
+    "name": "Sunset Runner",
+    "description": "Minimalist runners with soft suede overlays, tonal details, and an effortless lounge-to-street look.",
+    "brand": "Puma",
+    "price": 132,
+    "salePrice": 119,
+    "inventory": 14,
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "colors": [
+      "Sand",
+      "Coral"
+    ],
+   "images": [
+  "/images/white.avif"
+],
+    "category": "For Her",
+    "rating": 4.6,
+    "reviewCount": 36,
+    "isFeatured": false,
+    "isBestSeller": false
+  }
+]
