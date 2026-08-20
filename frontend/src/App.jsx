@@ -5,6 +5,8 @@ import { AppProvider, useApp } from "./context/AppContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ProtectedRoute, AdminRoute } from "./components/RouteGuards";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
@@ -32,6 +34,7 @@ export default function App() {
           {/* Header */}
           <Navbar />
 
+          <ScrollToTop />
           {/* Main App Content Viewport */}
           <main className="flex-grow">
             <Routes>
@@ -109,4 +112,14 @@ function ToastContainer() {
       ))}
     </div>
   );
+}
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
