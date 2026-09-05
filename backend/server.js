@@ -11,6 +11,7 @@ const productRoutes = require('./routes/products');
 const orderRoutes = require('./routes/orders');
 const notificationRoutes = require('./routes/notifications');
 const wishlistRoutes = require('./routes/wishlist');
+const paymentRoutes = require('./routes/payment');
 const app = express();
 const server = http.createServer(app);
 
@@ -44,6 +45,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/wishlist', wishlistRoutes);
+app.use('/api/payment', paymentRoutes);
 
 // Root test route
 app.get('/', (req, res) => {
