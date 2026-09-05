@@ -9,9 +9,7 @@ export const useApp = () => useContext(AppContext);
 export const AppProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem("token") || "");
-  const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("cart")) || [],
-  );
+  const [cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
   const [socket, setSocket] = useState(null);
   const [notifications, setNotifications] = useState([]);
@@ -41,8 +39,10 @@ export const AppProvider = ({ children }) => {
 
   // Sync cart and wishlist to local storage
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+    if (user) {
+      localStorage.setItem(`cart_${user.id}`, JSON.stringify(cart));
+    }
+  }, [cart, user]);
 
   // Set up socket.io connection when user log changes
   useEffect(() => {
@@ -122,7 +122,19 @@ export const AppProvider = ({ children }) => {
   const fetchUserProfile = async () => {
     try {
       const res = await axios.get("/auth/profile");
+
       setUser(res.data);
+
+      // Load cart for this specific user
+      const userCartKey = `cart_${res.data.id}`;
+      const savedUserCart = localStorage.getItem(userCartKey);
+
+      if (savedUserCart) {
+        setCart(JSON.parse(savedUserCart));
+      } else {
+        setCart([]);
+      }
+
       fetchNotifications();
     } catch (err) {
       logout();
@@ -145,6 +157,14 @@ export const AppProvider = ({ children }) => {
       const res = await axios.post("/auth/login", { email, password });
       setToken(res.data.token);
       setUser(res.data.user);
+      const userCartKey = `cart_${res.data.user.id}`;
+      const savedUserCart = localStorage.getItem(userCartKey);
+
+      if (savedUserCart) {
+        setCart(JSON.parse(savedUserCart));
+      } else {
+        setCart([]);
+      }
       addToast(`Welcome back, ${res.data.user.name}!`, "success");
       return { success: true };
     } catch (err) {
@@ -179,6 +199,10 @@ export const AppProvider = ({ children }) => {
   };
 
   const logout = () => {
+    if (user) {
+      localStorage.setItem(`cart_${user.id}`, JSON.stringify(cart));
+    }
+
     setToken("");
     setUser(null);
     setCart([]);
@@ -187,9 +211,14 @@ export const AppProvider = ({ children }) => {
   };
   // Cart operations
   const addToCart = (product, quantity, size, color) => {
+    if (!token) {
+      addToast("Please login to add items to cart", "error");
+      return;
+    }
     console.log("addToCart called");
     if (!size || !color) {
       addToast("Please select size and color", "error");
+      s;
       return;
     }
 
